@@ -1,0 +1,119 @@
+header {
+  background-color: #5429CC;
+  padding-top: 32px;
+}
+
+.header-content {
+  height: 212px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.header-content-button {
+  background-color: #6933FF;
+  height: 48px;
+  width: 195px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.header-content-button:hover {
+  transition: background-color 0.2s;
+  background-color: #602deb;
+}
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dialog-content {
+  background-color: #ffffff;
+  width: 576px;
+  padding: 48px;
+  border-radius: 16px;
+  z-index: 10;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%, -50%);
+}
+
+.dialog-title {
+  color: #363F5F;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.button-close-dialog {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  margin-top: 32px;
+}
+
+form input {
+  height: 48px;
+  border: 1px solid #d7d7d7;
+  background: #F0F2F5;
+  border-radius: 4px;
+  padding: 0 16px;
+}
+
+.form-type {
+  display: flex;
+  gap: 8px;
+}
+
+.form-type button {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  height: 48px;
+  border-radius: 4px;
+  color: #363F5F;
+  width: 100%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.form-type > .income {
+  background-color: #e8f8ef;
+  border-color: #12A454;
+
+}
+
+.form-type > .withdraw {
+  background-color: #f8eaed;
+  border-color: #E52E4D;
+}
+
+form > button {
+  background-color: #33CC95;
+  height: 48px;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+}

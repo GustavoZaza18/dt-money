@@ -1,0 +1,40 @@
+.table {
+  margin-top: 64px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+  color: #212529;
+  border-collapse: separate; 
+  border-spacing: 0 1em;
+}
+
+th {
+  font-weight: 400;
+  padding: 0 32px;
+  text-align: left;
+}
+
+td {
+  padding: 0 32px;
+  height: 64px;
+  background-color: #fff;
+}
+
+td:first-child {
+  border-radius: 8px 0 0 8px;
+}
+
+td:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.income {
+  color: #12A454;
+}
+
+.withdraw {
+  color: #E92929;
+}
