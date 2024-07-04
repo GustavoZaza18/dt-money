@@ -4,6 +4,7 @@ import "./header.css";
 import { X, ArrowUpCircle, ArrowDownCircle } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { createTransaction } from "../../api/transaction";
 
 interface Inputs {
   name: string
@@ -15,10 +16,14 @@ export function Header() {
   const [selectedType, setSelectedType] = useState("");
   const { register, handleSubmit } = useForm<Inputs>()
 
-  function creatTransaction(data: Inputs){
-    console.log({
-      ...data,
+  function submitCreatTransaction(data: Inputs){
+    createTransaction ({
+      name: data.name
+      price: data.price
+      category: data.category
       type: selectedType
+      date: new Date().toISOString()
+      id: Math.random().toString(36).substr(2, 9)
     })
   }
 
@@ -40,7 +45,7 @@ export function Header() {
             <Dialog.Title className="dialog-title">
               Cadastrar transação
             </Dialog.Title>
-            <form onSubmit={handleSubmit (creatTransaction)}>
+            <form onSubmit={handleSubmit (submitCreatTransaction)}>
               <input type="text" placeholder="Nome" {...register("name")}/>
               <input type="text" placeholder="Preço" {...register("price")}/>
               <div className="form-type">
